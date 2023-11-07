@@ -1,0 +1,178 @@
+[
+  {
+    "title": "Image 1",
+    "image": "./gallery/20230525_184233.jpg"
+  },
+  {
+    "title": "Image 2",
+    "image": "./gallery/20230525_192113.jpg"
+  },
+  {
+    "title": "Image 3",
+    "image": "./gallery/20230525_192418.jpg"
+  },
+  {
+    "title": "Image 4",
+    "image": "./gallery/20230730_182740.jpg"
+  },
+  {
+    "title": "Image 5",
+    "image": "./gallery/20230730_185638 - Copy.jpg"
+  },
+  {
+    "title": "Image 6",
+    "image": "./gallery/20230730_185638.jpg"
+  },
+  {
+    "title": "Image 7",
+    "image": "./gallery/20230730_193350.jpg"
+  },
+  {
+    "title": "Image 8",
+    "image": "./gallery/baptistry.jpg"
+  },
+  {
+    "title": "Image 9",
+    "image": "./gallery/Church.jpeg"
+  },
+  {
+    "title": "Image 10",
+    "image": "./gallery/Church2.jpeg"
+  },
+  {
+    "title": "Image 11",
+    "image": "./gallery/Church3.jpeg"
+  },
+  {
+    "title": "Image 12",
+    "image": "./gallery/Church5.jpeg"
+  },
+  {
+    "title": "Image 13",
+    "image": "./gallery/IMG_1080.JPG"
+  },
+  {
+    "title": "Image 14",
+    "image": "./gallery/IMG_1084.JPG"
+  },
+  {
+    "title": "Image 15",
+    "image": "./gallery/IMG_1085.JPG"
+  },
+  {
+    "title": "Image 16",
+    "image": "./gallery/IMG_1086.JPG"
+  },
+  {
+    "title": "Image 17",
+    "image": "./gallery/IMG_1087.JPG"
+  },
+  {
+    "title": "Image 18",
+    "image": "./gallery/IMG_1090.JPG"
+  },
+  {
+    "title": "Image 19",
+    "image": "./gallery/IMG_1091.JPG"
+  },
+  {
+    "title": "Image 20",
+    "image": "./gallery/IMG_1093.JPG"
+  },
+  {
+    "title": "Image 21",
+    "image": "./gallery/IMG_1094.JPG"
+  },
+  {
+    "title": "Image 22",
+    "image": "./gallery/IMG_1095.JPG"
+  },
+  {
+    "title": "Image 23",
+    "image": "./gallery/IMG_1096.JPG"
+  },
+  {
+    "title": "Image 24",
+    "image": "./gallery/IMG_1104.JPG"
+  },
+  {
+    "title": "Image 25",
+    "image": "./gallery/IMG_1106.JPG"
+  },
+  {
+    "title": "Image 26",
+    "image": "./gallery/IMG_1108.JPG"
+  },
+  {
+    "title": "Image 27",
+    "image": "./gallery/IMG_3837.JPG"
+  },
+  {
+    "title": "Image 28",
+    "image": "./gallery/IMG_3843.JPG"
+  },
+  {
+    "title": "Image 29",
+    "image": "./gallery/IMG_3846.JPG"
+  },
+  {
+    "title": "Image 30",
+    "image": "./gallery/IMG_3847.JPG"
+  },
+  {
+    "title": "Image 31",
+    "image": "./gallery/IMG_3849.JPG"
+  },
+  {
+    "title": "Image 32",
+    "image": "./gallery/IMG_3852.JPG"
+  },
+  {
+    "title": "Image 33",
+    "image": "./gallery/IMG_3853.JPG"
+  },
+  {
+    "title": "Image 34",
+    "image": "./gallery/Resized_20230521_190009(1).jpeg"
+  },
+  {
+    "title": "Image 35",
+    "image": "./gallery/Resized_20230524_191027(1).jpeg"
+  },
+  {
+    "title": "Image 36",
+    "image": "./gallery/Resized_20230524_191035(1).jpeg"
+  },
+  {
+    "title": "Image 37",
+    "image": "./gallery/Resized_20230524_191035.jpeg"
+  },
+  {
+    "title": "Image 38",
+    "image": "./gallery/Resized_20230524_191120(1).jpeg"
+  },
+  {
+    "title": "Image 39",
+    "image": "./gallery/Resized_20230524_191159.jpeg"
+  },
+  {
+    "title": "Image 40",
+    "image": "./gallery/Resized_20230730_200820.jpeg"
+  },
+  {
+    "title": "Image 41",
+    "image": "./gallery/Resized_20230730_200831.jpeg"
+  },
+  {
+    "title": "Image 42",
+    "image": "./gallery/Resized_20230730_200834.jpeg"
+  },
+  {
+    "title": "Image 43",
+    "image": "./gallery/Resized_20230730_201325.jpeg"
+  },
+  {
+    "title": "Image 44",
+    "image": "./gallery/Steeple.jpeg"
+  }
+]

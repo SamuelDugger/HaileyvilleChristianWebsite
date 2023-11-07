@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+    - primary meta tags
+  -->
+    <title>Haileyville Christian Church</title>
+    <meta name="title" content="Haileyville Christian Church" />
+    <meta name="description" content="Haileyville Christian Church" />
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="icon" href="church-icon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="church-icon.png" type="image/x-icon" />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./style/style2.css" />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik:wght@300,400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 
+    - flaticon
+  -->
+    <link rel="stylesheet" href="./style/flaticon.min.css" />
+
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="./images/Church.jpg" />
+  </head>
+
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header">
+      <div class="header-bottom" data-header>
+        <div class="container">
+          <a href="#" class="logo">
+            <img src="./images/My project-2.png" alt="logo" />
+          </a>
+
+          <nav class="navbar container" data-navbar>
+            <ul class="navbar-list">
+              <li class="navbar-item">
+                <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+              </li>
+
+              <li class="navbar-item">
+                <a href="services.html" class="navbar-link" data-nav-link
+                  >Services</a
+                >
+              </li>
+
+              <li class="navbar-item">
+                <a href="about.html" class="navbar-link" data-nav-link>About</a>
+              </li>
+
+              <li class="navbar-item">
+                <a href="events.html" class="navbar-link" data-nav-link
+                  >Events</a
+                >
+              </li>
+
+              <li class="navbar-item">
+                <a href="gallery.html" class="navbar-link" data-nav-link
+                  >Gallery</a
+                >
+              </li>
+
+              <li class="navbar-item">
+                <a href="index.html#contact" class="navbar-link" data-nav-link
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <button
+            class="nav-toggle-btn"
+            aria-label="toggle menu"
+            data-nav-toggler
+          >
+            <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- 
+        - #HERO
+      -->
+
+        <section
+          class="section hero has-before has-bg-image"
+          id="home"
+          aria-label="home"
+          style="background-image: url('./images/Church.jpg')"
+        >
+          <div class="container">
+            <h1 class="h1 hero-title">Haileyville Christian Church</h1>
+
+            <p class="hero-text">
+              Sit amet consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua suspendisse ultrices
+              gravida
+            </p>
+          </div>
+        </section>
+
+        <!-- 
+        - #TIMER
+      -->
+
+        <section class="section countdown">
+          <div class="container">
+            <h2 class="h2 section-title text-center">Next Service</h2>
+            <p id="nextLive" class="nextLive"></p>
+            <div class="timer-container">
+              <div class="timer">
+                <div>
+                  <p id="days">00</p>
+                  <span>Days</span>
+                </div>
+                <div>
+                  <p id="hours">00</p>
+                  <span>Hours</span>
+                </div>
+                <div>
+                  <p id="minutes">00</p>
+                  <span>Minutes</span>
+                </div>
+                <div>
+                  <p id="seconds">00</p>
+                  <span>Seconds</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+        - #SERVICE
+      -->
+
+        <section class="section service" id="services" aria-label="services">
+          <div class="container">
+            <h2 class="h2 section-title text-center">Service We Provide</h2>
+
+            <p class="section-text text-center">
+              Sit amet consectetur adipiscing elit sed do eiusmod tempor
+              incididunt labore dolore magna aliqua suspendisse
+            </p>
+
+            <ul class="grid-list">
+              <li>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon name="accessibility"></ion-icon>
+                  </div>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Praise & Worship</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Sit amet consectetur adipisci elit sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon name="people-circle"></ion-icon>
+                  </div>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Fellowship</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Sit amet consectetur adipisci elit sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon name="book-sharp"></ion-icon>
+                  </div>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Bible Study</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Sit amet consectetur adipisci elit sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon name="walk-sharp"></ion-icon>
+                  </div>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Outreach</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Sit amet consectetur adipisci elit sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon name="hand-left"></ion-icon>
+                  </div>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Missions</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Sit amet consectetur adipisci elit sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon name="musical-notes-sharp"></ion-icon>
+                  </div>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Music</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Sit amet consectetur adipisci elit sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- 
+        - #GALLERY
+      -->
+
+        <section
+          class="section gallery"
+          id="gallery"
+          aria-label="photo gallery"
+        >
+          <div class="container">
+            <div class="title-wrapper">
+              <div>
+                <h2 class="h2 section-title">Latest Photo Gallery</h2>
+
+                <p class="section-text">
+                  Sit amet consectetur adipiscing elit sed do eiusmod tempor
+                  incididunt labore dolore magna aliqua suspendisse
+                </p>
+              </div>
+
+              <a href="#" class="btn has-before">
+                <span class="span">Explore More Gallery</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+            </div>
+
+            <ul class="grid-list">
+              <li>
+                <div class="gallery-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 422; --height: 550"
+                  >
+                    <img
+                      src="./images/06mooreWeb-superJumbo.jpg"
+                      width="422"
+                      height="550"
+                      loading="lazy"
+                      alt="Worship"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Worship</h3>
+
+                    <p class="card-text">Praise and Worship</p>
+
+                    <a href="#" class="card-btn" aria-label="Read more">
+                      <ion-icon
+                        name="arrow-forward"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="gallery-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 422; --height: 550"
+                  >
+                    <img
+                      src="./images/congregational_singing_church.jpeg"
+                      width="422"
+                      height="550"
+                      loading="lazy"
+                      alt="Worship"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Worship</h3>
+
+                    <p class="card-text">Praise and Worship</p>
+
+                    <a href="#" class="card-btn" aria-label="Read more">
+                      <ion-icon
+                        name="arrow-forward"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="gallery-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 422; --height: 550"
+                  >
+                    <img
+                      src="./images//people-want-from-church.jpg"
+                      width="422"
+                      height="550"
+                      loading="lazy"
+                      alt="Worship"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Worship</h3>
+
+                    <p class="card-text">Praise and Worship</p>
+
+                    <a href="#" class="card-btn" aria-label="Read more">
+                      <ion-icon
+                        name="arrow-forward"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="gallery-card">
+                  <figure
+                    class="card-banner img-holder"
+                    style="--width: 422; --height: 550"
+                  >
+                    <img
+                      src="./images/251312046_10159756150844357_2532140369409329740_n.jpeg"
+                      width="422"
+                      height="550"
+                      loading="lazy"
+                      alt="Worship"
+                      class="img-cover"
+                    />
+                  </figure>
+
+                  <div class="card-content">
+                    <h3 class="h3 card-title">Worship</h3>
+
+                    <p class="card-text">Praise and Worship</p>
+
+                    <a href="#" class="card-btn" aria-label="Read more">
+                      <ion-icon
+                        name="arrow-forward"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 
+        - #APPOINTMENT
+      -->
+
+        <section class="section appoin" id="contact" aria-label="appointment">
+          <div class="container">
+            <div class="appoin-card">
+              <figure
+                class="card-banner img-holder"
+                style="--width: 250; --height: 774"
+              >
+                <img
+                  src="./images/7371-people-in-church-getty-images-rawpixel.jpg"
+                  width="250"
+                  height="774"
+                  loading="lazy"
+                  alt=""
+                  class="img-cover"
+                />
+              </figure>
+
+              <div class="card-content">
+                <h2 class="h2 section-title">Contact</h2>
+
+                <p class="section-text">
+                  Sit amet consectetur adipiscing elit sed do eiusmod tempor
+                  incididunt labore dolore magna aliqua suspendisse
+                </p>
+
+                <form action="" class="appoin-form">
+                  <div class="input-wrapper">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Full Name"
+                      required
+                      class="input-field"
+                    />
+
+                    <input
+                      type="email"
+                      name="email_address"
+                      placeholder="Email Address"
+                      required
+                      class="input-field"
+                    />
+                  </div>
+
+                  <div class="input-wrapper">
+                    <input
+                      type="text"
+                      name="phone"
+                      placeholder="Phone Number"
+                      required
+                      class="input-field"
+                    />
+                  </div>
+
+                  <textarea
+                    name="message"
+                    placeholder="Write Message"
+                    required
+                    class="input-field"
+                  ></textarea>
+
+                  <button type="submit" class="form-btn">
+                    <span class="span">Appointment Now</span>
+
+                    <ion-icon
+                      name="arrow-forward"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </button>
+                </form>
+              </div>
+
+              <figure
+                class="card-banner img-holder"
+                style="--width: 250; --height: 774"
+              >
+                <img
+                  src="./images/70006-pastor-church-thinkstockphotos-77734676.1200w.tn.jpg"
+                  width="250"
+                  height="774"
+                  loading="lazy"
+                  alt=""
+                  class="img-cover"
+                />
+              </figure>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer
+      class="footer has-bg-image"
+      style="background-image: url('./images/footer-background-image.jpg')"
+    >
+      <div class="container">
+        <div class="footer-link-box">
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Quick Links</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link has-before">Our Services</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link has-before">Meet Our Team</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link has-before">Events</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link has-before">Where are we</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link has-before">What we believe</a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Services</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link has-before">Worship</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link has-before">Community</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link has-before">Faith</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link has-before">Missions</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link has-before">Fellowship</a>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Upcoming Events</p>
+            </li>
+            <!-- Add the first event card -->
+            <li>
+              <div class="footer-event" id="footer-event-1">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 70; --height: 75"
+                >
+                  <img
+                    src=""
+                    width="70"
+                    height="75"
+                    loading="lazy"
+                    alt=""
+                    class="img-cover"
+                  />
+                </figure>
+                <div class="card-content">
+                  <h3>
+                    <a
+                      href="events.html#events-container"
+                      class="card-title"
+                    ></a>
+                  </h3>
+                  <div class="card-date">
+                    <ion-icon
+                      name="calendar-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+                    <span class="date"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Add the second event card -->
+            <li>
+              <div class="footer-event" id="footer-event-2">
+                <figure
+                  class="card-banner img-holder"
+                  style="--width: 70; --height: 75"
+                >
+                  <img
+                    src=""
+                    width="70"
+                    height="75"
+                    loading="lazy"
+                    alt=""
+                    class="img-cover"
+                  />
+                </figure>
+                <div class="card-content">
+                  <h3>
+                    <a
+                      href="events.html#events-container"
+                      class="card-title"
+                    ></a>
+                  </h3>
+                  <div class="card-date">
+                    <ion-icon
+                      name="calendar-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+                    <span class="date"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <p class="footer-list-title">Contact Us</p>
+            </li>
+
+            <li class="footer-list-item">
+              <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+
+              <address class="contact-link">
+                7528 Roberts Ave. Palm Bay, FL 32907
+              </address>
+            </li>
+
+            <li class="footer-list-item">
+              <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+
+              <a href="tel:+0123456789" class="contact-link"
+                >+012 (345) 67 89</a
+              >
+            </li>
+
+            <li class="footer-list-item">
+              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+              <span class="contact-link">Sun - Friday, 08 am - 09 pm</span>
+            </li>
+
+            <li class="footer-list-item">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+              <a href="mailto:support@gmail.com" class="contact-link"
+                >support@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a
+      href="#top"
+      class="back-top-btn"
+      aria-label="back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./js/footerevents.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/toggle.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./js/timer.js"></script>
+  </body>
+</html>

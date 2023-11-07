@@ -1,0 +1,1995 @@
+:root {
+  /**
+   * colors
+   */
+
+  --rich-black-fogra-39_25: hsla(0, 0%, 5%, 0.2);
+  --rich-black-fogra-39_50: hsla(0, 0%, 5%, 0.5);
+  --rich-black-fogra-39: hsl(0, 0%, 5%);
+  --blue_10: hsla(36, 61%, 58%, 0.1);
+  --eerie-black-1: hsl(0, 0%, 14%);
+  --eerie-black-2: hsl(0, 0%, 12%);
+  --eerie-black-2_85: hsla(0, 0%, 12%, 0.85);
+  --eerie-black-3: hsl(0, 0%, 8%);
+  --sonic-silver: hsl(0, 0%, 44%);
+  --davys-gray: hsl(210, 9%, 31%);
+  --light-gray: hsl(0, 0%, 80%);
+  --lighter-gray: hsl(0, 0%, 95%);
+  --platinum: hsl(0, 0%, 91%);
+  --black_30: hsla(0, 0%, 0%, 0.3);
+  --white_10: hsla(0, 0%, 100%, 0.1);
+  --white_30: hsla(0, 0%, 100%, 0.3);
+  --white_50: hsla(0, 0%, 100%, 0.5);
+  --white: hsl(0, 0%, 100%);
+  --jet: hsl(0, 0%, 21%);
+  --blue: #0088a9;
+  --dark-blue: #030629;
+  --blue-gray: #eee;
+
+  /**
+   * typography
+   */
+
+  --ff-oswald: "Oswald", sans-serif;
+  --ff-rubik: "Rubik", sans-serif;
+
+  --fs-40: 4rem;
+  --fs-30: 3rem;
+  --fs-24: 2.4rem;
+  --fs-18: 1.8rem;
+  --fs-14: 1.4rem;
+  --fs-13: 1.3rem;
+
+  --fw-300: 300;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /**
+   * spacing
+   */
+
+  --section-padding: 40px;
+
+  /**
+   * shadow
+   */
+
+  --shadow-1: 10px 0 60px hsla(0, 0%, 15%, 0.07);
+  --shadow-2: 10px 0 60px hsla(0, 0%, 15%, 0.1);
+
+  /**
+   * radius
+   */
+
+  --radius-5: 5px;
+  --radius-8: 8px;
+
+  /**
+   * transition
+   */
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li:not(.bullet-list li) {
+  list-style: none;
+}
+
+a,
+img,
+span,
+data,
+input,
+select,
+button,
+textarea,
+ion-icon {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+select,
+button,
+textarea {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+address {
+  font-style: normal;
+}
+
+html {
+  font-family: var(--ff-rubik);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+:focus-visible {
+  outline-offset: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(0, 0%, 98%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 80%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(0, 0%, 70%);
+}
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+.container {
+  padding-inline: 15px;
+}
+
+.section {
+  padding-block: var(--section-padding);
+  background-color: #24252a;
+}
+
+.has-before,
+.has-after {
+  position: relative;
+  z-index: 1;
+}
+
+.has-before::before,
+.has-after::after {
+  position: absolute;
+  content: "";
+}
+
+.has-bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.h1,
+.h2,
+.h3 {
+  font-family: var(--ff-oswald);
+  line-height: 1.3;
+}
+
+.h1,
+.h2 {
+  text-transform: uppercase;
+}
+
+.h1,
+.h3 {
+  font-weight: var(--fw-600);
+}
+
+.h1 {
+  color: var(--white);
+  font-size: var(--fs-40);
+}
+
+.h2 {
+  color: white;
+}
+.h3 {
+  color: var(--eerie-black-1);
+}
+
+.h2 {
+  font-size: var(--fs-30);
+}
+
+.h3 {
+  font-size: var(--fs-24);
+}
+
+.btn {
+  color: var(--white);
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: max-content;
+  padding: 10px 25px;
+  font-family: var(--ff-oswald);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+  border-radius: var(--radius-5);
+  overflow: hidden;
+}
+
+.btn::before {
+  background-color: var(--eerie-black-1);
+  inset: 0;
+  z-index: -1;
+  transform: skewY(-15deg) scaleY(0);
+  transition: var(--transition-2);
+}
+
+.btn:is(:hover, :focus)::before {
+  transform: skewY(-15deg) scaleY(2.5);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grid-list {
+  display: grid;
+  gap: 30px;
+}
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+
+.header-top-item,
+.header .btn {
+  display: none;
+}
+
+.header-top-list,
+.header-top-list .social-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-top-list {
+  justify-content: center;
+}
+
+.header-top-list .social-list {
+  gap: 20px;
+  padding-block: 15px;
+}
+
+.header-top-list .social-link {
+  color: var(--sonic-silver);
+  font-size: 15px;
+  transition: var(--transition-1);
+}
+
+.header-top-list .social-link:is(:hover, :focus) {
+  color: var(--blue);
+}
+
+.header-bottom {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  padding-block: 10px;
+  z-index: 4;
+}
+
+.header-bottom.active {
+  position: fixed;
+  top: 0;
+  background-color: var(--rich-black-fogra-39);
+  transform: translateY(-100%);
+  animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.header-bottom > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 400px; /* Adjust the value according to your desired size */
+}
+
+.nav-toggle-btn {
+  color: var(--white);
+  font-size: 40px;
+}
+.nav-toggle-btn.clicked {
+  background-color: var(--white_10);
+}
+
+.navbar {
+  position: absolute;
+  padding-inline: 0;
+  top: 100%;
+  left: 15px;
+  right: 15px;
+  background-color: var(--rich-black-fogra-39);
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.15s var(--cubic-out);
+}
+
+.navbar.active {
+  max-height: 360px;
+  transition-duration: 0.5s;
+}
+
+.navbar-list {
+  border-block-start: 1px solid var(--jet);
+  margin-block: 25px;
+}
+
+.navbar-item {
+  border-block-end: 1px solid var(--jet);
+}
+
+.navbar-link {
+  color: var(--white);
+  font-family: var(--ff-oswald);
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+  line-height: 1.5;
+  padding: 10px 30px;
+  transition: var(--transition-1);
+}
+
+.navbar-link:is(:hover, :focus) {
+  color: var(--blue);
+}
+
+.navbar.active .navbar-link:hover {
+  background-color: var(--white_10);
+}
+
+/* Position the container relative to the viewport */
+.facebook-icon-container {
+  position: absolute;
+  top: 10px; /* Adjust this value to position the icon vertically */
+  right: 10px; /* Adjust this value to position the icon horizontally */
+  z-index: 9999; /* Make sure the z-index is higher than other elements on the page */
+  background-color: white;
+  border-radius: 50%; /* Make the container circular */
+  /* Adjust the padding to control the size of the container */
+  /* Optional: Add box-shadow to create a subtle elevation effect */
+  /* Add a smooth transition effect for background-color change */
+  transition: background-color 0.7s;
+}
+
+/* Style the ion-icon inside the container */
+.facebook-icon-container ion-icon {
+  font-size: 30px; /* Adjust this value to increase/decrease the icon size */
+  color: #4267b2;
+}
+
+/* Optional: Apply color inversion on hover */
+.facebook-icon-container:hover {
+  background-color: #4267b2; /* Change the background color to the desired inverted color */
+}
+
+.facebook-icon-container:hover ion-icon {
+  color: white; /* Change the icon color to the desired eveinverted color */
+}
+
+/*-----------------------------------*\
+  #HERO
+\*-----------------------------------*/
+
+.hero {
+  --section-padding: 100px;
+  padding-block-start: calc(var(--section-padding) + 40px);
+  background-position: 20% center;
+}
+
+.hero::before {
+  inset: 0;
+  background-color: var(--rich-black-fogra-39_50);
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+
+.hero-text {
+  color: var(--white);
+  margin-block: 15px 40px;
+}
+
+/*-----------------------------------*\
+    #Timer
+  \*-----------------------------------*/
+.countdown {
+  background-color: var(--rich-black-fogra-39);
+}
+
+.countdown p {
+  font-weight: bolder;
+  text-align: center; /* Center align the text */
+}
+
+.nextLive {
+  margin-bottom: -20px;
+  font-size: larger;
+  color: var(--sonic-silver);
+}
+.timer {
+  display: flex;
+}
+
+.timer div {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column; /* Add flex-direction to create vertical alignment */
+  align-items: center; /* Center align the content vertically */
+}
+
+.timer div:last-child {
+  margin-right: 0;
+}
+
+.timer div p {
+  font-size: 60px;
+  margin-bottom: -24px;
+  color: white;
+}
+
+.timer div span {
+  margin-left: 5px;
+  font-weight: bolder;
+  color: var(--sonic-silver);
+}
+
+.timer-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*-----------------------------------*\
+    #SERVICE
+  \*-----------------------------------*/
+
+.service {
+  text-align: center;
+}
+
+.service .section-text {
+  margin-block: 15px 55px;
+  color: white;
+}
+
+.service-card {
+  background-color: var(--white);
+  padding: 60px 25px;
+  box-shadow: var(--shadow-1);
+  border-radius: var(--radius-8);
+}
+
+.service-card .card-icon {
+  color: var(--blue);
+  font-size: 70px;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-card .card-title {
+  margin-block: 15px 12px;
+  transition: var(--transition-1);
+  font-weight: 900;
+}
+
+.service-card .card-title:is(:hover, :focus) {
+  color: var(--blue);
+}
+
+.service-card .card-text {
+  margin-block-end: 30px;
+  font-weight: bold;
+}
+
+.service-card .card-btn {
+  color: var(--blue);
+  background-color: var(--white);
+  max-width: max-content;
+  margin-inline: auto;
+  font-size: 20px;
+  padding: 15px;
+  box-shadow: var(--shadow-2);
+  border-radius: var(--radius-5);
+  transition: var(--transition-2);
+}
+
+.service-card:is(:hover, :focus-within) .card-btn {
+  background-color: var(--blue);
+  color: var(--white);
+}
+.service-card:hover {
+  transform: scale(1.05);
+}
+/*-----------------------------------*\
+    #BELIEFS
+  \*-----------------------------------*/
+.beliefs {
+  background: radial-gradient(var(--blue), #24252a);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.beliefs .container {
+  max-width: 800px; /* Set a maximum width to the container if needed */
+}
+
+.beliefs .section-title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.beliefs p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.beliefs ul {
+  list-style: none;
+  padding-left: 40px;
+  /* Set the <ul> as a flexbox */
+  padding-left: 0;
+  flex-direction: column; /* Align children in a column */
+  align-items: center; /* Center the children horizontally */
+}
+.first {
+  border-top: 1px solid #fff;
+}
+.beliefs li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #fff; /* Add a border to the bottom of each belief item */
+  padding-bottom: 10px; /* Add some spacing between the text and the border */
+}
+
+.beliefs span {
+  color: #87cefa;
+  font-weight: bold;
+}
+.beliefs span a {
+  display: inline-block; /* Set the display property to inline-block */
+
+  margin-right: 10px; /* Add some space between the links (you can adjust this value as needed) */
+}
+
+.beliefs span a:hover {
+  color: #f5f8e0; /* Dark blue for the hover effect */
+  text-decoration: underline;
+}
+
+/* Adjust the bullet color */
+.bullet-list li::marker {
+  color: var(--blue);
+}
+
+/*-----------------------------------*\
+    #TERMINOLOGY
+  \*-----------------------------------*/
+.terms {
+  background-color: #24252a;
+  padding: 30px;
+}
+.terms .section-content {
+  background-color: var(
+    --davys-gray
+  ); /* Choose a color that complements the main background */
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px; /* Optional: Add rounded corners to the background */
+}
+
+.terms p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd; /* Optional separator between terms */
+  padding-bottom: 20px; /* Optional space between term and definition */
+}
+.terms .section-content h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #87cefa;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.terms .section-content p {
+  font-size: 18px;
+  font-family: "Arial", sans-serif; /* Change to your preferred font */
+  color: #fff;
+  margin-bottom: 30px;
+}
+/*-----------------------------------*\
+    #HEAVEN
+  \*-----------------------------------*/
+.section-heaven {
+  padding: 20px;
+  text-align: center;
+}
+.section-content {
+  text-align: left;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.heaven .section-content {
+  background-color: var(
+    --davys-gray
+  ); /* Choose a color that complements the main background */
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px; /* Optional: Add rounded corners to the background */
+}
+.section-content p {
+  margin-bottom: 20px;
+}
+.section-content h3 {
+  font-size: 20px;
+  color: #87cefa;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.section-content a {
+  display: inline-block;
+  font-weight: bold; /* Set the display property to inline-block */
+  color: var(--blue);
+}
+.section-content a:hover {
+  text-decoration: underline;
+  color: #029cfc;
+}
+.heaven .section-title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.heaven p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+/*-----------------------------------*\
+    #WHY US
+  \*-----------------------------------*/
+.why .section-title {
+  margin-bottom: 30px;
+}
+.why .section-content {
+  background-color: var(--blue);
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px; /* Optional: Add rounded corners to the background */
+}
+.why .section-content h3 {
+  color: white;
+  text-align: center;
+}
+.why .section-content h4 {
+  color: white;
+  text-align: center;
+}
+.why .section-content p {
+  color: white;
+  text-align: center;
+}
+/*-----------------------------------*\
+    #ABOUT
+  \*-----------------------------------*/
+.about {
+  background-color: var(--davys-gray);
+}
+.about .section-title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.about-content {
+  text-align: left;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+}
+.about-content h3 {
+  font-size: 20px;
+  color: #87cefa;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.about-content a {
+  display: inline-block;
+  font-weight: bold; /* Set the display property to inline-block */
+  color: var(--blue);
+}
+.about-content a:hover {
+  text-decoration: underline;
+  color: #029cfc;
+}
+
+/*-----------------------------------*\
+    #THANKS
+  \*-----------------------------------*/
+.thanks p {
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Style for the container holding the button */
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style for the button */
+.thanks button {
+  background-color: var(--blue); /* Blue color for the button background */
+  color: #fff; /* White color for the button text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.thanks button:hover {
+  background-color: white;
+  color: var(--blue); /* Darker shade of blue on hover */
+}
+
+/* Remove default button styling */
+.thanks button:focus,
+.thanks button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/*-----------------------------------*\
+    #GALLERY
+  \*-----------------------------------*/
+.pagination {
+  display: flex;
+  justify-content: space-between; /* Spread the buttons evenly with arrows at each end */
+  align-items: center; /* Align buttons and images vertically */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.page-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line if needed */
+  gap: 8px; /* Add gap between buttons */
+  margin-top: 10px;
+  max-width: 400px; /* Set a max-width to control the number of buttons per row */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pagination button {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  height: 36px;
+  margin: 0 5px;
+  border-radius: 5px; /* Add border radius for button shape */
+}
+
+.pagination button:hover {
+  /* background-color: var(--blue); */
+  opacity: 0.6;
+}
+
+.pagination button:disabled {
+  background-color: #cccccc;
+  cursor: default;
+}
+
+.title-wrapper {
+  margin-block-end: 60px;
+}
+
+.gallery .section-text {
+  margin-block: 12px 15px;
+  color: white;
+}
+
+.gallery-card {
+  position: relative;
+}
+
+.gallery-card .card-banner .img-cover {
+  transition: var(--transition-2);
+}
+
+.gallery-card:is(:hover, :focus-within) .card-banner .img-cover {
+  transform: scale(1.1);
+}
+
+.gallery-card .card-content {
+  position: absolute;
+  inset: 15px;
+  background-color: var(--eerie-black-2_85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transition: var(--transition-2);
+}
+
+.gallery-card:is(:hover, :focus-within) .card-content {
+  opacity: 1;
+}
+
+.gallery-card :is(.card-title, .card-text) {
+  color: var(--white);
+}
+
+.gallery-card .card-btn {
+  background-color: var(--white);
+  color: var(--blue);
+  font-size: 18px;
+  padding: 16px;
+  border-radius: var(--radius-5);
+  margin-block-start: 12px;
+  transition: var(--transition-1);
+}
+
+.gallery-card .card-btn:is(:hover, :focus) {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.gall {
+  padding-bottom: 20px;
+}
+
+.gp .img-cover {
+  transition: transform 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(128, 168, 34, 0.2); /* This sets the box shadow properties */
+}
+
+.gp .img-cover:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* This changes the box shadow on hover to make it more pronounced */
+}
+
+.image-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Grey out the background */
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-popup img {
+  max-width: 90%;
+  max-height: 90%;
+  cursor: pointer;
+}
+
+/* Style for the close button */
+.close-button {
+  position: absolute;
+  line-height: 24px;
+  top: 10px;
+  left: 20px;
+  background-color: transparent;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+.close-button:hover {
+  background-color: var(--white_30);
+}
+
+/* Adjust the close button appearance on hover */
+.close-button:hover {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+/*-----------------------------------*\
+    #EVENTS
+  \*-----------------------------------*/
+.events .img-holder {
+  border-radius: var(--radius-8);
+}
+
+.events-container h3 {
+  font-family: var(--ff-rubik);
+  font-weight: 800;
+  font-size: medium;
+}
+.events-container .blog-card {
+  background-color: white;
+  box-shadow: var(--shadow-2);
+  border-radius: var(--radius-8);
+  padding: 10px 10px;
+}
+
+.events-container .card-banner {
+  background-size: cover;
+  background-position: center;
+  width: 100px; /* Set a fixed width for the container */
+  height: 100px; /* Set a fixed height for the container */
+  position: relative; /* Add relative positioning for the container */
+}
+
+.events-container .date-container {
+  position: absolute; /* Position the date container relative to the card banner */
+  bottom: 0.1px; /* Adjust the vertical position as needed */
+  right: 0.1px; /* Adjust the horizontal position as needed */
+  background-color: var(
+    --eerie-black-2_85
+  ); /* Set the background color with 85% opacity */
+  color: white; /* Set the text color to white */
+}
+
+.events-container .month-day {
+  font-size: 12px; /* Adjust the font size as needed */
+}
+
+.events-container .blog-card:hover {
+  transform: scale(1.03);
+  background-color: var(--blue-gray);
+}
+
+.events-container .date {
+  color: var(--sonic-silver);
+  font-weight: bold;
+}
+
+.events-container .desc {
+  color: var(--sonic-silver);
+}
+
+@media (max-width: 358px) {
+  .events-container p {
+    display: none;
+  }
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .events-container .card-banner {
+    width: 150px; /* Increase the width for larger screens */
+    height: 150px; /* Increase the height for larger screens */
+  }
+  .events-container .month-day {
+    font-size: 16px;
+  }
+  .events-container .title {
+    font-size: large;
+  }
+  .events-container h3 {
+    font-size: large;
+  }
+  .events-container .date {
+    font-size: medium;
+  }
+
+  .events-container .desc {
+    font-size: medium;
+  }
+}
+
+/* Media query for even larger screens */
+@media (min-width: 1200px) {
+  .events-container .card-banner {
+    width: 200px; /* Increase the width for even larger screens */
+    height: 200px; /* Increase the height for even larger screens */
+  }
+  .events-container .month-day {
+    font-size: 18px;
+  }
+
+  .events-container .title {
+    font-size: x-large;
+  }
+  .events-container h3 {
+    font-size: x-large;
+  }
+}
+
+/*-----------------------------------*\
+    #MAP
+  \*-----------------------------------*/
+
+.map {
+  background-color: var(--rich-black-fogra-39);
+}
+.map .section-text {
+  color: white;
+  margin-top: 10px;
+  margin-left: 0px;
+  width: auto;
+}
+
+.map .section-title {
+  padding-top: -10px;
+}
+/*-----------------------------------*\
+    #APPOINTMENT
+  \*-----------------------------------*/
+
+.appoin {
+  padding-block-start: 15px;
+}
+.appoin .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.appoin-card .card-banner {
+  display: flex; /* Display the card-banner containers */
+  justify-content: center; /* Center the images horizontally */
+  align-items: center; /* Center the images vertically */
+}
+
+.appoin-card .card-banner img {
+  max-width: 100%; /* Ensure the images don't exceed their container's width */
+  max-height: 100%; /* Ensure the images don't exceed their container's height */
+}
+
+.appoin-card .card-content {
+  background-color: var(--blue);
+  padding: 80px 15px;
+  text-align: center;
+  color: var(--white);
+}
+
+.appoin-card .section-title {
+  color: var(--white);
+}
+
+.appoin-card .section-text {
+  margin-block: 15px 55px;
+}
+
+.input-field {
+  background-color: var(--white);
+  color: var(--davys-gray);
+  min-height: 56px;
+  min-width: 280px;
+  padding-inline: 25px;
+  border-radius: var(--radius-5);
+  margin-block-end: 20px;
+  outline: none;
+  outline-offset: 0;
+}
+
+.input-field:focus {
+  outline: 3px solid var(--black_30);
+}
+
+select.input-field {
+  appearance: none;
+}
+
+select.input-field,
+.input-field::placeholder,
+.input-field.date {
+  font-family: var(--ff-oswald);
+  color: var(--eerie-black-1);
+  font-weight: var(--fw-500);
+}
+
+.input-field > option {
+  color: var(--sonic-silver);
+  font-family: var(--ff-rubik);
+}
+
+.input-field.date {
+  text-transform: uppercase;
+}
+
+.input-field::-webkit-calendar-picker-indicator {
+  opacity: 0.85;
+}
+
+textarea.input-field {
+  flex: 1;
+  min-width: 280px; /* Set a minimum width for the textarea */
+  padding-block: 15px;
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-btn {
+  color: var(--white);
+  font-family: var(--ff-oswald);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+  max-width: 280px; /* Set a maximum width for the button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--white);
+  padding: 10px 20px; /* Increase the padding to make the button bigger */
+  font-size: var(--fs-16);
+  border-radius: var(--radius-5);
+  transition: var(--transition-1);
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+.form-btn:is(:hover, :focus) {
+  background-color: var(--white);
+  color: var(--eerie-black-1);
+}
+
+/*-----------------------------------*\
+    #FOOTER
+  \*-----------------------------------*/
+.footer::before {
+  inset: 0;
+  background-color: var(--rich-black-fogra-39_50);
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+.footer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-event {
+  display: flex;
+  gap: 25px;
+  margin-block-start: 20px;
+}
+
+.footer-event .card-banner {
+  flex-shrink: 0;
+  width: 70px;
+  height: 75px;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer-event .card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-event .card-title {
+  color: var(--white);
+  font-family: var(--ff-oswald);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-500);
+  line-height: 1.5;
+  margin-block-end: 5px;
+  transition: var(--transition-1);
+}
+
+.footer-event .card-title:is(:hover, :focus) {
+  color: var(--blue);
+}
+
+.footer-event .card-date {
+  display: flex;
+  align-items: center;
+  font-size: var(--fs-13);
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.footer-event .card-date ion-icon {
+  color: var(--blue);
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-inline-end: 7px;
+}
+.footer {
+  background-color: var(--eerie-black-2);
+  padding-top: 20px;
+  padding-block-end: 30px;
+}
+
+.footer-top {
+  margin-block-end: 65px;
+}
+
+.footer-brand {
+  border: 1px solid var(--white_10);
+  margin-block-end: 70px;
+}
+
+.footer .logo {
+  text-align: center;
+  padding: 25px;
+}
+
+.footer .input-wrapper {
+  background-color: var(--white);
+  position: relative;
+  margin: 25px;
+  padding: 15px;
+}
+
+.footer .input-wrapper:focus-within {
+  outline: 3px solid var(--white_30);
+}
+
+.footer .email-field {
+  text-align: center;
+  margin-block-end: 15px;
+  color: inherit;
+  outline: none;
+}
+
+.footer .btn {
+  max-width: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+.footer-link-box {
+  display: grid;
+  gap: 50px;
+}
+
+.footer-list-title {
+  color: var(--white);
+  font-family: var(--ff-oswald);
+  font-size: var(--fs-18);
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+  margin-block-end: 30px;
+}
+
+.footer-link::before {
+  position: static;
+  padding: 2.5px;
+  background-color: var(--white);
+  display: block;
+  border-radius: 50%;
+  transition: var(--transition-1);
+}
+
+.footer-link,
+.blog-card,
+.blog-card .card-date,
+.footer-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.footer-link {
+  color: var(--white);
+  gap: 10px;
+  margin-block-start: 8px;
+  transition: var(--transition-1);
+}
+
+.footer-link:is(:hover, :focus) {
+  color: var(--blue);
+}
+
+.footer-link:is(:hover, :focus)::before {
+  background-color: var(--blue);
+}
+
+.blog-card {
+  gap: 25px;
+  margin-block-start: 20px;
+}
+
+.blog-card .card-banner {
+  flex-shrink: 0;
+}
+
+.blog-card .card-title {
+  color: var(--white);
+  font-family: var(--ff-oswald);
+  font-size: var(--fs-14);
+  font-weight: var(--fw-500);
+  line-height: 1.5;
+  margin-block-end: 5px;
+  transition: var(--transition-1);
+}
+
+.blog-card .card-title:is(:hover, :focus) {
+  color: var(--blue);
+}
+
+.blog-card .card-date {
+  gap: 5px;
+  font-size: var(--fs-13);
+  text-transform: uppercase;
+  color: var(--white_50);
+}
+
+.blog-card .card-date ion-icon {
+  --ionicon-stroke-width: 50px;
+}
+
+.footer-list-item {
+  align-items: flex-start;
+  gap: 10px;
+  margin-block-start: 10px;
+}
+
+.footer-list-item ion-icon {
+  color: var(--blue);
+  font-size: 18px;
+  flex-shrink: 0;
+  --ionicon-stroke-width: 50px;
+  margin-block: 7px;
+}
+
+.contact-link {
+  color: var(--white);
+  transition: var(--transition-1);
+}
+
+a.contact-link:is(:hover, :focus) {
+  color: var(--blue);
+}
+
+.footer-bottom {
+  background-color: var(--eerie-black-3);
+  text-align: center;
+  padding: 15px;
+}
+
+.copyright-link {
+  display: inline-block;
+  color: var(--blue);
+}
+
+/*-----------------------------------*\
+    #BACK TO TOP
+  \*-----------------------------------*/
+
+.back-top-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 20px;
+  padding: 10px;
+  border-radius: var(--radius-5);
+  z-index: 4;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-1);
+}
+
+.back-top-btn.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-10px);
+}
+
+/*-----------------------------------*\
+    #MEDIA QUERIES
+  \*-----------------------------------*/
+
+/**
+   * responsive for large than 575px screen
+   */
+@media (max-width: 575px) {
+  .logo img {
+    width: 200px; /* Adjust the value according to your desired size */
+  }
+
+  .container {
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 575px) {
+  /**
+     * CUSTOM PROPERTY
+     */
+
+  :root {
+    /**
+       * typography
+       */
+
+    --fs-40: 6rem;
+  }
+
+  /**
+     * REUSED STYLE
+     */
+  .facebook-icon-container {
+    top: 20px; /* Adjust this value to position the icon vertically */
+    right: 20px;
+  }
+  .container,
+  .header-top {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .btn {
+    padding: 13px 40px;
+  }
+
+  .h2 {
+    --fs-30: 3.5rem;
+  }
+
+  /**
+     * HEADER
+     */
+
+  .header-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+    z-index: 4;
+    background-color: var(--white);
+    border-radius: 0 0 20px 20px;
+  }
+
+  .header-top-item:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header-top-item ion-icon {
+    font-size: 18px;
+    color: var(--blue);
+    --ionicon-stroke-width: 50px;
+  }
+
+  .header-top-item .item-title {
+    color: var(--eerie-black-1);
+    font-weight: var(--fw-500);
+  }
+
+  .header-top-item .item-link {
+    transition: var(--transition-1);
+  }
+
+  .header-top-item .item-link:is(:hover, :focus) {
+    color: var(--blue);
+  }
+
+  .header-top-list {
+    justify-content: space-between;
+  }
+
+  /**
+     * HERO
+     */
+
+  .hero {
+    padding-block-start: calc(var(--section-padding) + 80px);
+  }
+
+  .hero-text {
+    font-size: var(--fs-18);
+  }
+
+  /**
+     * PRICING
+     */
+
+  .filter-btn .btn-icon {
+    display: block;
+    font-size: 55px;
+    line-height: 1;
+    margin-block-end: 5px;
+  }
+
+  .pricing-card {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .pricing-card .wrapper {
+    order: 0;
+  }
+
+  .pricing-card .card-price {
+    align-self: flex-start;
+    line-height: 1.6;
+  }
+
+  /**
+     * GALLERY
+     */
+  .pagination {
+    justify-content: right;
+    align-items: right; /* Align buttons and images vertically */
+  }
+  .gallery .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /**
+     * APPOINTMENT
+     */
+
+  .appoin-card .card-content {
+    padding-inline: 50px;
+  }
+
+  /**
+     * FOOTER
+     */
+
+  .footer .email-field {
+    margin-block-end: 0;
+    text-align: left;
+    font-size: var(--fs-18);
+    padding: 10px 15px;
+    padding-inline-end: 210px;
+  }
+
+  .footer .btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    width: max-content;
+  }
+
+  .footer-link-box {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-list:is(:nth-child(3), :nth-child(4)) {
+    grid-column: 1 / 3;
+  }
+
+  .blog-card .card-title {
+    --fs-14: 1.7rem;
+    max-width: 25ch;
+  }
+}
+
+/**
+   * responsive for large than 768px screen
+   */
+@media (max-width: 768px) {
+  .appoin-card .card-banner img {
+    display: none;
+  }
+
+  .appoin-card .img-holder {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    /**
+       * typography
+       */
+
+    --fs-40: 8rem;
+  }
+
+  /**
+     * REUSED STYLE
+     */
+
+  .container {
+    max-width: 720px;
+  }
+
+  .h2 {
+    --fs-30: 4rem;
+  }
+
+  .section-text {
+    max-width: 50ch;
+    margin-inline: auto;
+  }
+
+  /**
+     * HEADER
+     */
+
+  .header-top {
+    max-width: 780px;
+  }
+
+  /**
+     * SERVICE
+     */
+
+  .service .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /**
+     * PRICING
+     */
+
+  .pricing-tab-container {
+    padding: 40px;
+  }
+
+  .pricing-card .wrapper {
+    margin-inline-end: auto;
+  }
+
+  /**
+     * GALLERY
+     */
+
+  .gallery .section-text {
+    margin-inline: 0;
+  }
+
+  .gallery-card .card-content {
+    inset: 30px;
+  }
+
+  /**
+     * APPOINTMENT
+     */
+
+  .appoin-card .card-banner {
+    display: block;
+  }
+
+  .appoin-card {
+    display: flex;
+  }
+
+  /**
+     * FOOTER
+     */
+
+  .footer-list:is(:nth-child(3), :nth-child(4)) {
+    grid-column: auto;
+  }
+}
+
+/**
+   * responsive for large than 992px screen
+   */
+
+@media (min-width: 992px) {
+  /**
+     * CUSTOM PROPERTY
+     */
+
+  :root {
+    /**
+       * typography
+       */
+
+    --fs-40: 10rem;
+  }
+
+  /**
+     * REUSED STYLE
+     */
+
+  .container {
+    max-width: 1100px;
+  }
+
+  /**
+     * HEADER
+     */
+
+  .header-top {
+    max-width: 1020px;
+  }
+
+  .header-bottom {
+    padding-block: 20px;
+  }
+
+  .navbar-link {
+    padding-inline: 10px;
+  }
+
+  /**
+     * HERO
+     */
+
+  .hero {
+    --section-padding: 150px;
+    padding-block-start: calc(var(--section-padding) + 100px);
+  }
+
+  .hero-title,
+  .hero-text {
+    max-width: 600px;
+  }
+
+  /**
+     * SERVICE
+     */
+
+  .service .grid-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /**
+     * PRICING
+     */
+
+  .pricing .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pricing-card {
+    height: 100%;
+  }
+
+  .pricing-card .card-banner {
+    flex-shrink: 0;
+  }
+
+  /**
+     * GALLERY
+     */
+
+  .gallery .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .gallery .section-text {
+    margin-block-end: 0;
+  }
+
+  /**
+     * APPOINTMENT
+     */
+
+  .appoin-card .input-wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  /**
+     * FOOTER
+     */
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer .logo {
+    padding: 60px 70px;
+    border-block-end: none;
+    border-inline-end: 1px solid var(--white_10);
+  }
+
+  .footer .appoin {
+    flex-grow: 1;
+    margin-inline: 70px;
+  }
+}
+
+/**
+   * responsive for large than 1200px screen
+   */
+
+@media (min-width: 1200px) {
+  /**
+     * CUSTOM PROPERTY
+     */
+
+  :root {
+    /**
+       * typography
+       */
+
+    --fs-40: 11rem;
+
+    /**
+       * spacing
+       */
+
+    --section-padding: 120px;
+  }
+
+  /**
+     * REUSED STYLE
+     */
+
+  .container {
+    max-width: 1200px;
+  }
+
+  /**
+     * HEADER
+     */
+
+  .header-top {
+    max-width: 1260px;
+  }
+
+  .header-top-list {
+    gap: 30px;
+  }
+
+  .header-top-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header-top-item:nth-child(2) {
+    margin-inline-end: auto;
+  }
+
+  .nav-toggle-btn {
+    display: none;
+  }
+
+  .navbar,
+  .navbar-list,
+  .navbar-item {
+    all: unset;
+  }
+
+  .navbar-list,
+  .header .btn {
+    display: flex;
+  }
+
+  /**
+     * HERO
+     */
+
+  .hero {
+    background-position: 20% center;
+    padding-block-end: 200px;
+  }
+
+  .hero-title,
+  .hero-text {
+    max-width: 680px;
+  }
+  .hero-text {
+    padding-top: 150px;
+  }
+  /**
+     * PRICING
+     */
+
+  .filter-btn {
+    min-width: 178px;
+  }
+
+  /**
+     * GALLERY
+     */
+
+  .gallery .grid-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /**
+     * APPOINTMENT
+     */
+
+  .appoin-card .card-content {
+    flex-grow: 1;
+  }
+
+  /**
+     * FOOTER
+     */
+
+  .footer-link-box {
+    grid-template-columns: 0.5fr 0.5fr 1fr 0.8fr;
+  }
+
+  /**
+     * BACK TO TOP
+     */
+
+  .back-top-btn {
+    padding: 15px;
+  }
+}
